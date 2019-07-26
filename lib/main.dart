@@ -9,7 +9,7 @@ void main() {
       primarySwatch: Colors.blue,
     ),
     home: new SplashScreen(
-      seconds: 8,
+      seconds: 9,
       navigateAfterSeconds: new LoginPage(),
       title: new Text('Shopping Zone ',
           style: new TextStyle(
