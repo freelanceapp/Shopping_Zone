@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "612292371160",
+    "firebase_url": "https://shoppingzone-codezone.firebaseio.com",
+    "project_id": "shoppingzone-codezone",
+    "storage_bucket": "shoppingzone-codezone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612292371160:android:a90fa00543168ec9",
+        "android_client_info": {
+          "package_name": "com.codezoneteam.com.shopping_zone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612292371160-se9ofdqn0082a3qtceepubt2ltelb2bd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codezoneteam.com.shopping_zone",
+            "certificate_hash": "8098a4b178d6d49a4a1702bc1bcb74aa0520eb88"
+          }
+        },
+        {
+          "client_id": "612292371160-f3fi1qfeiik65oufin94bc4mdghonaq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa6eid0rjUawe-sksJq49IplTkqanBv2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612292371160-f3fi1qfeiik65oufin94bc4mdghonaq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

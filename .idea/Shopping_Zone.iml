@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../Shopping_Zone/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../Shopping_Zone/gen" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../Shopping_Zone/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/../../Shopping_Zone/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../Shopping_Zone/assets" />
+        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/../../Shopping_Zone/libs" />
+        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/../../Shopping_Zone/proguard_logs" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" generated="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="Dart SDK" level="project" />
+    <orderEntry type="library" exported="" name="Dart Packages" level="project" />
+    <orderEntry type="library" exported="" name="Flutter Plugins" level="project" />
+  </component>
+</module>
