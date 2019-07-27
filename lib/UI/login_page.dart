@@ -116,10 +116,10 @@ class _LoginPageState extends State<LoginPage>
                 Padding(
                   padding: EdgeInsets.only(top: 75.0),
                   child: new Image(
-                      width: 250.0,
+                      width: 270.0,
                       height: 191.0,
                       fit: BoxFit.fill,
-                      image: new AssetImage('images/login_logo.png')),
+                      image: new AssetImage('images/logotipo.png')),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20.0),

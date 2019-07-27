@@ -16,7 +16,7 @@ void main() {
               fontSize: 21.0,
               fontWeight: FontWeight.bold,
               color: Colors.white)),
-      image: Image.asset('images/login_logo.png'),
+      image: Image.asset('images/logotipo.png'),
 
       //backgroundColor: Colors.white,
       styleTextUnderTheLoader: new TextStyle(),
