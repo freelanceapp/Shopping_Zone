@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +10,17 @@ import 'package:shopping_zone/style/bubble_indication_painter.dart';
 import 'package:shopping_zone/UI/Auth.dart';
 import 'package:shopping_zone/UI/Home.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+// New Imports for initializing User Data thought Http
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 
+// Declare http with unreal value
+const URL = "https://flutter.io/";
+
+// LoginPage Class initialize
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
-
   @override
   _LoginPageState createState() => new _LoginPageState();
 }
@@ -22,10 +30,8 @@ class _LoginPageState extends State<LoginPage>
   Auth auth = new Auth();
 
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   final FocusNode myFocusNodeEmailLogin = FocusNode();
   final FocusNode myFocusNodePasswordLogin = FocusNode();
-
   final FocusNode myFocusNodePassword = FocusNode();
   final FocusNode myFocusNodeEmail = FocusNode();
   final FocusNode myFocusNodeName = FocusNode();
@@ -41,7 +47,7 @@ class _LoginPageState extends State<LoginPage>
   TextEditingController signupNameController = new TextEditingController();
   TextEditingController signupPasswordController = new TextEditingController();
   TextEditingController signupConfirmPasswordController =
-      new TextEditingController();
+  new TextEditingController();
 
   PageController _pageController;
 
@@ -55,6 +61,7 @@ class _LoginPageState extends State<LoginPage>
 
   static const _platform = const MethodChannel('schedule_notifications_app');
 
+  // Google SignIn Using FireBase
   Future<FirebaseUser> _googlesignIn() async {
     GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
     GoogleSignInAuthentication gSA = await googleSignInAccount.authentication;
@@ -70,11 +77,11 @@ class _LoginPageState extends State<LoginPage>
     assert(user.uid == currentUser.uid);
     return user;
   }
-
+  // FaceBook SignIn Using FireBase
   Future<FirebaseUser> _facebooksignIn() async {
     facebookLogin.loginBehavior = FacebookLoginBehavior.webViewOnly;
     FacebookLoginResult loginResult =
-        await facebookLogin.logInWithReadPermissions(['email']);
+    await facebookLogin.logInWithReadPermissions(['email']);
     if (loginResult.status == FacebookLoginStatus.loggedIn) {
       final AuthCredential credential = FacebookAuthProvider.getCredential(
         accessToken: loginResult.accessToken.token,
@@ -83,6 +90,19 @@ class _LoginPageState extends State<LoginPage>
       return user;
     }
     return null;
+  }
+
+  Future<dynamic> initUser() async {
+    user = await _auth.currentUser();
+    if (user == null) {
+      setState(() {
+        Auth auth = new Auth();
+      });
+    } else {
+      // If there is a user, tell Flutter to keep that
+      // loading screen up Firebase logs in this user.
+      user = await _auth.currentUser();
+    }
   }
 
   @override
@@ -95,9 +115,18 @@ class _LoginPageState extends State<LoginPage>
         },
         child: SingleChildScrollView(
           child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height >= 775.0
-                ? MediaQuery.of(context).size.height
+            width: MediaQuery
+                .of(context)
+                .size
+                .width,
+            height: MediaQuery
+                .of(context)
+                .size
+                .height >= 775.0
+                ? MediaQuery
+                .of(context)
+                .size
+                .height
                 : 775.0,
             decoration: new BoxDecoration(
               gradient: new LinearGradient(
@@ -238,6 +267,7 @@ class _LoginPageState extends State<LoginPage>
     }
   }
 
+
   Widget _buildMenuBar(BuildContext context) {
     return Container(
       width: 300.0,
@@ -286,6 +316,7 @@ class _LoginPageState extends State<LoginPage>
     );
   }
 
+// SignIn
   Widget _buildSignIn(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 23.0),
@@ -486,10 +517,12 @@ class _LoginPageState extends State<LoginPage>
               Padding(
                 padding: EdgeInsets.only(top: 10.0, right: 40.0),
                 child: GestureDetector(
-                  onTap: () => _facebooksignIn().whenComplete(() {
-                    Navigator.of(context).pushReplacement(new MaterialPageRoute(
-                        builder: (BuildContext context) => new Home()));
-                  }), //showInSnackBar("Facebook button pressed"),
+                  onTap: () =>
+                      _facebooksignIn().whenComplete(() {
+                        Navigator.of(context).pushReplacement(
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => new Home()));
+                      }), //showInSnackBar("Facebook button pressed"),
                   child: Container(
                     padding: const EdgeInsets.all(15.0),
                     decoration: new BoxDecoration(
@@ -506,10 +539,12 @@ class _LoginPageState extends State<LoginPage>
               Padding(
                 padding: EdgeInsets.only(top: 10.0),
                 child: GestureDetector(
-                  onTap: () => _googlesignIn().whenComplete(() {
-                    Navigator.of(context).pushReplacement(new MaterialPageRoute(
-                        builder: (BuildContext context) => new Home()));
-                  }), //showInSnackBar("Google button pressed"),
+                  onTap: () =>
+                      _googlesignIn().whenComplete(() {
+                        Navigator.of(context).pushReplacement(
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => new Home()));
+                      }), //showInSnackBar("Google button pressed"),
                   child: Container(
                     padding: const EdgeInsets.all(15.0),
                     decoration: new BoxDecoration(

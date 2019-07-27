@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_shopping_zone" default="compile.module.shopping_zone">
+  <dirname property="module.shopping_zone.basedir" file="${ant.file.module_shopping_zone}"/>
+  
+  <property name="module.jdk.home.shopping_zone" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.shopping_zone" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.shopping_zone" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.shopping_zone" value="-encoding UTF-8 -source 12 -target 12 ${compiler.args}"/>
+  
+  <property name="shopping_zone.output.dir" value="undefined"/>
+  <property name="shopping_zone.testoutput.dir" value="undefined"/>
+  
+  <path id="shopping_zone.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="shopping_zone.module.production.classpath">
+    <path refid="${module.jdk.classpath.shopping_zone}"/>
+    <path refid="library.dart_sdk.classpath"/>
+    <path refid="library.dart_packages.classpath"/>
+    <path refid="library.flutter_plugins.classpath"/>
+  </path>
+  
+  <path id="shopping_zone.runtime.production.module.classpath">
+    <path refid="library.dart_sdk.classpath"/>
+    <path refid="library.dart_packages.classpath"/>
+    <path refid="library.flutter_plugins.classpath"/>
+  </path>
+  
+  <path id="shopping_zone.module.classpath">
+    <path refid="${module.jdk.classpath.shopping_zone}"/>
+    <path refid="library.dart_sdk.classpath"/>
+    <path refid="library.dart_packages.classpath"/>
+    <path refid="library.flutter_plugins.classpath"/>
+  </path>
+  
+  <path id="shopping_zone.runtime.module.classpath">
+    <path refid="library.dart_sdk.classpath"/>
+    <path refid="library.dart_packages.classpath"/>
+    <path refid="library.flutter_plugins.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.shopping_zone">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.shopping_zone">
+    <patternset refid="excluded.from.module.shopping_zone"/>
+  </patternset>
+  
+  <path id="shopping_zone.module.sourcepath">
+    <dirset dir="${module.shopping_zone.basedir}/../../Shopping_Zone">
+      <include name="gen"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.shopping_zone" depends="compile.module.shopping_zone.production,compile.module.shopping_zone.tests" description="Compile module Shopping_Zone"/>
+  
+  <target name="compile.module.shopping_zone.production" depends="register.custom.compilers" description="Compile module Shopping_Zone; production classes">
+    <mkdir dir="${shopping_zone.output.dir}"/>
+    <javac2 destdir="${shopping_zone.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.shopping_zone}/javac">
+      <compilerarg line="${compiler.args.shopping_zone}"/>
+      <bootclasspath refid="shopping_zone.module.bootclasspath"/>
+      <classpath refid="shopping_zone.module.production.classpath"/>
+      <src refid="shopping_zone.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.shopping_zone"/>
+    </javac2>
+    
+    <copy todir="${shopping_zone.output.dir}">
+      <fileset dir="${module.shopping_zone.basedir}/../gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.shopping_zone.tests" depends="register.custom.compilers,compile.module.shopping_zone.production" description="compile module Shopping_Zone; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.shopping_zone" description="cleanup module">
+    <delete dir="${shopping_zone.output.dir}"/>
+    <delete dir="${shopping_zone.testoutput.dir}"/>
+  </target>
+</project>

@@ -3288,6 +3288,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --------------------------------------------------------------------------------
 charcode
+http
+http_parser
 matcher
 path
 source_span
@@ -4042,6 +4044,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --------------------------------------------------------------------------------
 firebase_auth
 firebase_core
+shared_preferences
+url_launcher
 
 // Copyright 2017 The Chromium Authors. All rights reserved.
 //

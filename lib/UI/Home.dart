@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
+import 'package:shopping_zone/UI/Auth.dart';
+import 'package:shopping_zone/UI/login_page.dart';
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -9,6 +11,8 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
+  get auth => auth;
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -116,17 +120,27 @@ class HomeState extends State<Home> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+              },
               child: ListTile(
                 title: Text('SignOut'),
                 leading: Icon(
                   Icons.exit_to_app,
                 ),
+                onTap:() { signOut();
+                  Navigator.of(context).pushReplacement(new MaterialPageRoute(
+                  builder: (BuildContext context) => new LoginPage()));}
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
+
+  signOut() async {
+    FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+    _firebaseAuth.signOut();
+  }
 }
+

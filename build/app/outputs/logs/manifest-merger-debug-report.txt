@@ -6,6 +6,8 @@ INJECTED from C:\Users\samsu\Desktop\Shopping_Zone\android\app\src\main\AndroidM
 INJECTED from C:\Users\samsu\Desktop\Shopping_Zone\android\app\src\main\AndroidManifest.xml:1:1-52:12
 MERGED from C:\Users\samsu\Desktop\Shopping_Zone\android\app\src\main\AndroidManifest.xml:1:1-52:12
 MERGED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_auth\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-15:12
+MERGED from [:shared_preferences] C:\Users\samsu\Desktop\Shopping_Zone\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-14:12
 MERGED from [:flutter_facebook_login] C:\Users\samsu\Desktop\Shopping_Zone\build\flutter_facebook_login\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
 MERGED from [:connectivity] C:\Users\samsu\Desktop\Shopping_Zone\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-10:12
 MERGED from [:google_sign_in] C:\Users\samsu\Desktop\Shopping_Zone\build\google_sign_in\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-9:12
@@ -107,6 +109,8 @@ application
 ADDED from C:\Users\samsu\Desktop\Shopping_Zone\android\app\src\main\AndroidManifest.xml:11:5-51:19
 MERGED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_auth\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_auth\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-13:19
+MERGED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-12:19
 MERGED from [:firebase_core] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_core\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_core\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.firebase:firebase-core:17.0.0] C:\Users\samsu\.gradle\caches\transforms-1\files-1.1\firebase-core-17.0.0.aar\6fdaf018b6c82f8a27088cd5434e2939\AndroidManifest.xml:7:5-20
@@ -249,6 +253,10 @@ INJECTED from C:\Users\samsu\Desktop\Shopping_Zone\android\app\src\main\AndroidM
 INJECTED from C:\Users\samsu\Desktop\Shopping_Zone\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_auth\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_auth\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\samsu\Desktop\Shopping_Zone\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\samsu\Desktop\Shopping_Zone\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_facebook_login] C:\Users\samsu\Desktop\Shopping_Zone\build\flutter_facebook_login\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_facebook_login] C:\Users\samsu\Desktop\Shopping_Zone\build\flutter_facebook_login\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
 MERGED from [:connectivity] C:\Users\samsu\Desktop\Shopping_Zone\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
@@ -401,6 +409,14 @@ ADDED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_
 		ADDED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_auth\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_auth] C:\Users\samsu\Desktop\Shopping_Zone\build\firebase_auth\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:17-122
+activity#io.flutter.plugins.urllauncher.UrlLauncherPlugin$WebViewActivity
+ADDED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher] C:\Users\samsu\Desktop\Shopping_Zone\build\url_launcher\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:13-92
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:connectivity] C:\Users\samsu\Desktop\Shopping_Zone\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\samsu\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-17.0.0.aar\033c4f64b9413c674ba6c46c85003633\AndroidManifest.xml:23:5-79
