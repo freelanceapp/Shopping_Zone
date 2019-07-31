@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
 import 'package:splashscreen/splashscreen.dart';
 import 'package:shopping_zone/UI/login_page.dart';
 import 'package:shopping_zone/style/theme.dart' as Theme;
@@ -6,7 +7,7 @@ import 'package:shopping_zone/style/theme.dart' as Theme;
 void main() {
   runApp(new MaterialApp(
     theme: new ThemeData(
-      primarySwatch: Colors.blue,
+      backgroundColor: Color(0xFFFFD500),
     ),
     home: new SplashScreen(
       seconds: 4,

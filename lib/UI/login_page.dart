@@ -224,7 +224,7 @@ class _LoginPageState extends State<LoginPage>
             fontSize: 16.0,
             fontFamily: "WorkSansSemiBold"),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xFFFAD003),
       duration: Duration(seconds: 3),
     ));
   }
@@ -531,7 +531,7 @@ class _LoginPageState extends State<LoginPage>
                     ),
                     child: new Icon(
                       FontAwesomeIcons.facebookF,
-                      color: Color(0xFF0084ff),
+                      color: Color(0xFFFFD500),
                     ),
                   ),
                 ),
@@ -553,7 +553,7 @@ class _LoginPageState extends State<LoginPage>
                     ),
                     child: new Icon(
                       FontAwesomeIcons.google,
-                      color: Color(0xFF0084ff),
+                      color: Color(0xFFFFD500),
                     ),
                   ),
                 ),
